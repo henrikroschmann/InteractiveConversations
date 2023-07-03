@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "text": "Hello, adventurers. What brings you here?",
+        "media": "https://cdn.blizzardwatch.com/wp-content/uploads/2019/09/Greedfall01.png",
+        "options": [
+            {
+                "text": "We're looking for treasure.",
+                "next": 2
+            },
+            {
+                "text": "We're lost. Can you help us?",
+                "next": 3
+            },
+            {
+                "text": "Just passing through.",
+                "next": null
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "text": "Treasure, you say? I might have a clue for you...",
+        "media": "https://cdn.blizzardwatch.com/wp-content/uploads/2019/09/Greedfall02.png",
+        "options": [
+            {
+                "text": "Tell us more.",
+                "next": 4
+            },
+            {
+                "text": "We'll find it ourselves.",
+                "next": null
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "text": "Lost, are you? I can give you directions...",
+        "media": "https://cdn.blizzardwatch.com/wp-content/uploads/2019/09/Greedfall04.png",
+        "options": [
+            {
+                "text": "Yes, please.",
+                "next": 5
+            },
+            {
+                "text": "No, thanks.",
+                "next": null
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "text": "There's a cave to the east...",
+        "media": "https://cdn.blizzardwatch.com/wp-content/uploads/2019/09/Greedfall03.png",
+        "options": [
+{
+                "text": "Tell us more.",
+                "next": null
+            }]
+    },
+    {
+        "id": 5,
+        "text": "Just follow this road...",
+        "media": "https://example.com/image5.jpg",
+        "options": [
+{
+                "text": "Tell us more.",
+                "next": null
+            }]
+    }
+]
