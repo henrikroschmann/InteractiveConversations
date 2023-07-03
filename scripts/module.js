@@ -11,7 +11,7 @@ class ConversationWindow extends Application {
 		});
 	}
 
-	
+
 	getData() {
 		// Get the current conversation node
 		const node = game.conversationNode;
@@ -50,49 +50,49 @@ class ConversationWindow extends Application {
 
 class NPCActor extends Actor {
 	prepareData() {
-	  super.prepareData();
-  
-	  // Add a conversationTree property to the data
-	  this.data.data.conversationTree = this.data.data.conversationTree || [];
+		super.prepareData();
+
+		// Add a conversationTree property to the data
+		this.data.data.conversationTree = this.data.data.conversationTree || [];
 	}
-  }
-  
-  class NPCActorSheet extends ActorSheet {
+}
+
+class NPCActorSheet extends ActorSheet {
 	/** @override */
 	static get defaultOptions() {
-	  return mergeObject(super.defaultOptions, {
-		classes: ['sheet', 'actor', 'npc'],
-		width: 600,
-		height: 600
-	  });
+		return mergeObject(super.defaultOptions, {
+			classes: ['sheet', 'actor', 'npc'],
+			width: 600,
+			height: 600
+		});
 	}
-  
+
 	/** @override */
 	get template() {
-	  return 'modules/InteractiveConversations/templates/npc-sheet.html';
+		return 'modules/InteractiveConversations/templates/npc-sheet.html';
 	}
-	
+
 	/** @override */
 	getData() {
-	  const data = super.getData();
-	  data.conversationTree = this.actor.data.data.conversationTree;
-	  return data;
+		const data = super.getData();
+		data.conversationTree = this.actor.data.data.conversationTree;
+		return data;
 	}
-	
+
 	/** @override */
 	_updateObject(event, formData) {
-	  if (formData['data.conversationTree']) {
-		formData['data.conversationTree'] = formData['data.conversationTree'];
-	  }
-	  return super._updateObject(event, formData);
+		if (formData['data.conversationTree']) {
+			formData['data.conversationTree'] = formData['data.conversationTree'];
+		}
+		return super._updateObject(event, formData);
 	}
-  }
-  
+}
+
 
 
 Hooks.on('init', () => {
 	game.conversation = new ConversationWindow();
-	  
+
 	Actors.unregisterSheet("core", ActorSheet);
 	Actors.registerSheet("InteractiveConversations", NPCActorSheet, { makeDefault: false });
 
@@ -103,18 +103,18 @@ Hooks.on('canvasReady', () => {
 	const token = game.canvas.tokens.controlled.find(t => t.actor.type === "npc" && t.actor.system.conversationTree);
 
 	if (token) {
-	  // Initialize the conversation tree and node
-	  game.conversationTree = token.actor.system.conversationTree;
-	  game.conversationNode = game.conversationTree[0];
-  
-	  // Render the conversation window
-	  game.conversation.render(true);
+		// Initialize the conversation tree and node
+		game.conversationTree = token.actor.system.conversationTree;
+		game.conversationNode = game.conversationTree[0];
+
+		// Render the conversation window
+		game.conversation.render(true);
 	}
 });
 
-  
 
-  Hooks.on('getSceneControlButtons', (controls) => {
+
+Hooks.on('getSceneControlButtons', (controls) => {
 	let tokenButton = controls.find(b => b.name == "token")
 
 	if (tokenButton) {
