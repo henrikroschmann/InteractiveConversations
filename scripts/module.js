@@ -48,14 +48,14 @@ class ConversationWindow extends Application {
 	}
 }
 
-class NPCActor extends Actor {
-	prepareData() {
-		super.prepareData();
+// class NPCActor extends Actor {
+// 	prepareData() {
+// 		super.prepareData();
 
-		// Add a conversationTree property to the data
-		this.data.data.conversationTree = this.data.data.conversationTree || [];
-	}
-}
+// 		// Add a conversationTree property to the data
+// 		this.data.data.conversationTree = this.data.data.conversationTree || [];
+// 	}
+// }
 
 class NPCActorSheet extends ActorSheet {
 	/** @override */
@@ -81,9 +81,9 @@ class NPCActorSheet extends ActorSheet {
 
 	/** @override */
 	_updateObject(event, formData) {
-		if (formData['data.conversationTree']) {
-			formData['data.conversationTree'] = formData['data.conversationTree'];
-		}
+		// if (formData['data.conversationTree']) {
+		// 	formData['data.conversationTree'] = formData['data.conversationTree'];
+		// }
 		return super._updateObject(event, formData);
 	}
 }
