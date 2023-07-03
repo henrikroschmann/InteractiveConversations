@@ -1,0 +1,18 @@
+{
+    "name": "InteractiveConversations",
+    "version": "0.0.1",
+    "description": "InteractiveConversations is a Foundry VTT module that enhances role-playing immersion by providing a dynamic conversation interface for NPCs.",
+    "repository": "https://github.com/henrikroschmann/InteractiveConversations",
+    "author": "Henrik Röschmann",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint ."
+    },
+    "devDependencies": {
+        "eslint": "^8.42.0",
+        "eslint-config-google": "^0.14.0",
+        "eslint-plugin-import": "^2.25.2",
+        "eslint-plugin-n": "^15.0.0",
+        "eslint-plugin-promise": "^6.0.0"
+    }
+}

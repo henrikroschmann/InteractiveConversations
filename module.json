@@ -1,0 +1,23 @@
+{
+  "id": "InteractiveConversations",
+  "title": "Interactive Conversations",
+  "description": "InteractiveConversations is a Foundry VTT module that enhances role-playing immersion by providing a dynamic conversation interface for NPCs.",
+  "version": "#{VERSION}#",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10.291"
+  },
+  "authors": [
+    {
+      "name": "Henrik Röschmann"
+    }
+  ],
+  "esmodules": ["scripts/module.js"],  
+  "styles": ["styles/module.css"],
+  "packs": [],
+  "url": "#{URL}#",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",  
+  "license": "LICENSE",
+  "readme": "README.md"
+}

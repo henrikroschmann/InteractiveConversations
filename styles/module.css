@@ -1,0 +1,26 @@
+#conversation-window {
+  max-height: 90vh; /* for example, adjust as needed */
+  overflow-y: auto; /* add a scrollbar if needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#conversation-window .image {
+  flex: 1;
+}
+
+#conversation-window .options {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#conversation-window .option {
+  padding: 10px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}

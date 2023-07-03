@@ -1,0 +1,14 @@
+<div id="conversation-window">
+    <div class="image">
+      <img src="{{media}}" alt="Image">
+    </div>
+    <div class="text">
+      {{text}}
+    </div>
+    <div class="options">
+      {{#each options as |option|}}
+      <button class="option">{{option.text}}</button>
+      {{/each}}
+    </div>
+  </div>
+  
